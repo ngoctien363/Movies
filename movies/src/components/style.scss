@@ -1,0 +1,174 @@
+$green: #4caf50;
+$black: black;
+$white: white;
+$gray: #39445a;
+.imagebox {
+  background: black;
+  padding: 0px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.2s;
+  ////////////////
+  // display: flex;
+  // flex-direction: column;
+  // width: 200px;
+  // padding: 5px;
+  // margin: 5px 0;
+  // background-color: #282c34;
+  // border-radius: 10px;
+  // position: relative;
+  // font-family: "Montserrat", sans-serif;
+}
+
+.imagebox img {
+  opacity: 1;
+  transition: 0.5s opacity;
+  border-radius: 10px;
+}
+
+.imagebox .imagebox-desc {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0px;
+  color: white;
+  font-size: 1.2em;
+  left: 0px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  position: absolute;
+  transition: 0.5s padding;
+  text-align: center;
+  width: 100%;
+}
+
+.imagebox:hover img {
+  opacity: 0.7;
+  cursor: pointer;
+  // transform: scale(1.1);
+}
+
+.imagebox:hover .imagebox-desc {
+  padding-bottom: 10%;
+  cursor: pointer;
+}
+
+.img-fluid {
+  height: 400px;
+}
+
+.btn-go-back {
+  // color: #df4444;
+  font-weight: 500;
+  // background: none !important;
+  // border: none;
+  // outline: none;
+
+  &:hover {
+    text-decoration: underline;
+    // color: #c63d3d;
+  }
+}
+// .btnBack{
+//   position: fixed;
+//   z-index: 100;
+// }
+
+/**detail*/
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1140px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  // padding-top: 40px;
+}
+
+.container-form {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+}
+
+.col-left,
+.col-right {
+  width: 55%;
+  padding: 45px 35px;
+  display: flex;
+}
+.content{
+  position: relative;
+  width: 100%;
+  color: #666666;
+}
+.content h2{
+  text-align: left;
+}
+
+.col-left {
+  width: 45%;
+  background: $black;
+  -webkit-clip-path: polygon(
+    98% 17%,
+    100% 34%,
+    98% 51%,
+    100% 68%,
+    98% 84%,
+    100% 100%,
+    0 100%,
+    0 0,
+    100% 0
+  );
+  clip-path: polygon(
+    98% 17%,
+    100% 34%,
+    98% 51%,
+    100% 68%,
+    98% 84%,
+    100% 100%,
+    0 100%,
+    0 0,
+    100% 0
+  );
+}
+
+/**header*/
+
+.header {
+  width: 100%;
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  // background-color: $gray;
+  background-color: $black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3vw;
+  // padding-bottom: 15px;
+  box-shadow: 0px 1px 5px black;
+  color: white;
+  z-index: 100;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    padding-top: 15px;
+    font-size: 6.4vw;
+  }
+}
+
+
+/**search*/
+
+.search {
+  display: flex;
+  margin: 15px 0;
+}

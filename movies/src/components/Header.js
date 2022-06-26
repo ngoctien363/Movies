@@ -1,10 +1,11 @@
 import React from 'react';
+import './style.scss'
 
 const Header = ({heading}) => {
 	return (
-		<div className='col'>
-			<h1>{heading}</h1>
-		</div>
+		<span onClick={() => window.scroll(0, 0)} className="header">
+			{heading}
+		</span>
 	);
 };
 
