@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Input } from "reactstrap";
+import { Badge, Input } from "reactstrap";
 import DetailMovie from "./DetailMovie";
 import './style.scss'
 import { removeVietnameseTones } from '../childComp/convertViet/Index'
@@ -48,9 +48,10 @@ const MovieList = ({ movies, reloadData }) => {
                 {newDataMovies.length !== 0 ? newDataMovies.map((movie, index) => (
                     <div key={index} className="col-md-3 col-sm-12 mt-4">
                         <div className="imagebox" onClick={() => handleSelected(movie)}>
+                            <Badge className="badge" color={movie.vote_average > 6 ? "primary" : "secondary"}>{movie.vote_average}</Badge>
                             <img width="100%" className="img-fluid" src={urlPath + movie.poster_path} alt="movies"></img>
                             <span className="imagebox-desc">
-                                {movie.title}
+                                {movie.title} {`(${new Date().getFullYear(movie.release_date)})`}
                             </span>
                         </div>
                     </div>

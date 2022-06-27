@@ -11,6 +11,8 @@ $gray: #39445a;
   border-radius: 10px;
   transition: transform 0.2s;
   ////////////////
+  display: flex;
+  flex-direction: column;
   // display: flex;
   // flex-direction: column;
   // width: 200px;
@@ -26,6 +28,16 @@ $gray: #39445a;
   opacity: 1;
   transition: 0.5s opacity;
   border-radius: 10px;
+  position: relative;
+  top: -21px;
+}
+.badge {
+  position: relative;
+  transform: scale(1) translate(50%, -50%);
+  transform-origin: 100% 0%;
+  width: fit-content;
+  left: 225px;
+  z-index: 9;
 }
 
 .imagebox .imagebox-desc {
@@ -94,7 +106,7 @@ $gray: #39445a;
   height: auto;
   display: flex;
   background: $gray;
-  box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .col-left,
@@ -103,16 +115,16 @@ $gray: #39445a;
   padding: 45px 35px;
   display: flex;
 }
-.col-right{
+.col-right {
   background-color: $gray;
 }
-.content{
+.content {
   position: relative;
   width: 100%;
   // color: #666666;
   color: $white;
 }
-.content h2{
+.content h2 {
   text-align: left;
 }
 
@@ -168,7 +180,6 @@ $gray: #39445a;
     font-size: 6.4vw;
   }
 }
-
 
 /**search*/
 

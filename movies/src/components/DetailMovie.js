@@ -26,7 +26,7 @@ export default function DetailMovie(props) {
                         <h2>{item.original_title} {`(${new Date().getFullYear(item.release_date)})`}</h2>
                         
                         {/* <IndexProgress count={item.vote_average} /> */}
-                        <Progress className="progress-xs" color="info" value={item.vote_average}>{item.vote_average}</Progress>
+                        <Progress className="progress-xs" color="info" value={item.vote_average}>{item.vote_average}%</Progress>
                         <div className='row mt-3'>
                             <h3 style={{textAlign: 'left'}}>Overview</h3>
                             <p style={{textAlign: 'left'}}>{item.overview}</p>
