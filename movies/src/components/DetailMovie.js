@@ -1,7 +1,8 @@
 import React, { useMemo } from 'react'
-import { Button } from 'reactstrap'
+import { Button, Progress } from 'reactstrap'
 import './style.scss'
 import { img_500 } from '../config/config'
+// import IndexProgress from '../progress/Index'
 // import styled from 'styled-components';
 
 export default function DetailMovie(props) {
@@ -22,12 +23,19 @@ export default function DetailMovie(props) {
                 </div>
                 <div className='col-right'>
                     <div className='content'>
-                        <h2>{item.original_title}</h2>
+                        <h2>{item.original_title} {`(${new Date().getFullYear(item.release_date)})`}</h2>
+                        
+                        {/* <IndexProgress count={item.vote_average} /> */}
+                        <Progress className="progress-xs" color="info" value={item.vote_average}>{item.vote_average}</Progress>
+                        <div className='row mt-3'>
+                            <h3 style={{textAlign: 'left'}}>Overview</h3>
+                            <p style={{textAlign: 'left'}}>{item.overview}</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    ), [item.poster_path, item.original_title])
+    ), [item.poster_path, item.original_title, item.release_date, item.vote_average, item.overview])
     return (
         <React.Fragment>
             <>
